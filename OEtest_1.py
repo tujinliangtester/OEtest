@@ -56,6 +56,7 @@ def col_reduce(oe_tmp, input_col_num):
     return oe_tmp
 
 
+
 # 替換各因子的狀態，為後續行合併做準備
 def state_replace(oe_tmp, input_dict):
     key_num = len(input_dict.keys())
