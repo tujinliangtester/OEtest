@@ -56,7 +56,6 @@ def col_reduce(oe_tmp, input_col_num):
     return oe_tmp
 
 
-
 # 替換各因子的狀態，為後續行合併做準備
 def state_replace(oe_tmp, input_dict):
     key_num = len(input_dict.keys())
@@ -161,8 +160,9 @@ def output_xl(oe_tmp, input_dict):
 if __name__ == '__main__':
     # 需要手动选择正交表
     flag = input('请确认input.xlsx已准备就绪，yes？')
-    if (flag != 'yes' or flag != 'y'):
-        exit(500)
+    # if (flag != 'yes' or flag != 'y'):
+    #     print(flag)
+    #     exit(502)
     table_var = int(input('输入选择的正交表，因子数量:'))
     table_state = int(input('输入选择的正交表，状态数量:'))
     table_name = 'oe_' + str(table_state) + '_' + str(table_var)
@@ -193,6 +193,7 @@ if __name__ == '__main__':
     print('注意：本程序预置的正交表均为标准正交表，交叉正交表需要去配置')
     print('已完成正交表整理、替换，请做以下操作')
     print('1.手动填充缺失的任意项，可以按照最常用的进行')
-    print('2.删掉不可能的项')
-    print('3.补充最常见、用户最喜欢的组合 ')
+    print('2.补充列；恢复前期减少的状态')
+    print('3.删掉不可能的项')
+    print('4.补充最常见、用户最喜欢的组合 ')
     print('+++++++++++++++++++++++++++++++++++')
